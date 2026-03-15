@@ -1356,21 +1356,42 @@ h1, h2, h3, h4, h5, h6, p, span {
         text-align: center;
         padding: 70px 5% 0;
         justify-content: center;
+        min-height: 100vh;
     }
     
     .Home-content {
         max-width: 100%;
         margin-bottom: 30px;
+        order: 1;
     }
     
     .Home-img {
         margin-left: 0;
         margin-top: 20px;
+        order: 2;
     }
     
     .Home-img img {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
+    }
+    
+    .Home-content h1 {
+        font-size: 40px;
+    }
+    
+    .Home-content h3 {
+        font-size: 24px;
+    }
+    
+    .Home-content p {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+    
+    .btn-container {
+        justify-content: center;
+        margin-top: 20px;
     }
 }
 
@@ -1380,8 +1401,31 @@ h1, h2, h3, h4, h5, h6, p, span {
     }
     
     .Home-img img {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
+    }
+    
+    .Home-content h1 {
+        font-size: 32px;
+    }
+    
+    .Home-content h3 {
+        font-size: 20px;
+    }
+    
+    .Home-content p {
+        font-size: 14px;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .btn-box {
+        width: 200px;
+        text-align: center;
     }
 }
 /* Contact Section - Fix title alignment */
@@ -1447,4 +1491,87 @@ h1, h2, h3, h4, h5, h6, p, span {
     background: rgba(59, 130, 246, 0.2);
     border: 2px solid rgba(59, 130, 246, 0.5);
     color: #3b82f6;
+}
+/* Better Mobile Responsive Design */
+@media (max-width: 768px) {
+    /* About Section Mobile */
+    .About {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5% 0;
+    }
+    
+    .About-img {
+        margin: 0 auto 30px;
+        order: 1;
+    }
+    
+    .About-text {
+        order: 2;
+    }
+    
+    /* Projects Mobile */
+    .container2 {
+        padding: 0 5%;
+    }
+    
+    .project {
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+    
+    /* Contact Mobile */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 5%;
+    }
+    
+    .contact-text {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    /* Skills Mobile */
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small mobile adjustments */
+    section {
+        padding: 60px 0;
+    }
+    
+    .Skills, .Projects, .Experience, .Contact {
+        padding: 60px 3% !important;
+    }
+    
+    .sub-title {
+        font-size: 32px !important;
+    }
+    
+    .project h3 {
+        font-size: 20px;
+    }
+    
+    .project p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .experience h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    
+    .experience p {
+        font-size: 14px;
+    }
 }
