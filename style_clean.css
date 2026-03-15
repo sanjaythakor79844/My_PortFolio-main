@@ -1579,38 +1579,44 @@ h1, h2, h3, h4, h5, h6, p, span {
     .About {
         flex-direction: column;
         text-align: center;
-        padding: 50px 3% 0;
+        padding: 40px 4% 0;
         min-height: auto;
     }
     
     .About-img {
-        margin: 0 auto 25px;
+        margin: 0 auto 30px;
         order: 1;
     }
     
     .About-img img {
-        width: 220px;
-        height: 220px;
+        width: 250px;
+        height: 250px;
     }
     
     .About-text {
         order: 2;
+        max-width: 100%;
+        padding: 0 10px;
     }
     
     .About-text h2 {
         font-size: 36px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        line-height: 1.2;
     }
     
     .About-text h4 {
-        font-size: 18px;
-        margin-bottom: 15px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 1.3;
     }
     
     .About-text p {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        text-align: left;
+        padding: 0 5px;
     }
     
     /* Skills Mobile */
@@ -1768,20 +1774,28 @@ h1, h2, h3, h4, h5, h6, p, span {
     }
     
     .About-text h2 {
-        font-size: 24px;
+        font-size: 28px;
+        margin-bottom: 15px;
+        line-height: 1.2;
     }
     
     .About-text h4 {
-        font-size: 16px;
+        font-size: 18px;
+        margin-bottom: 15px;
+        line-height: 1.3;
     }
     
     .About-text p {
-        font-size: 13px;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        text-align: left;
+        padding: 0 5px;
     }
     
     .About-img img {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
     }
     
     .project h3 {
