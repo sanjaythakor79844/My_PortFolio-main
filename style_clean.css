@@ -89,6 +89,7 @@ body
     flex: 0 0 auto;
     margin-left: 20px;
     z-index: 1;
+    position: relative;
 }
 
 .Home-img img {
@@ -96,6 +97,100 @@ body
     height: 350px;
     border-radius: 50%;
     object-fit: cover;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* Interactive Animated Border */
+.Home-img::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #0ef, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+    background-size: 400% 400%;
+    animation: gradientRotate 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+.Home-img::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #0ef, transparent, #0ef);
+    animation: borderSpin 3s linear infinite;
+    z-index: 1;
+}
+
+/* Hover Effects */
+.Home-img:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(14, 239, 255, 0.5);
+}
+
+.Home-img:hover::before {
+    animation-duration: 2s;
+    transform: scale(1.1);
+}
+
+.Home-img:hover::after {
+    animation-duration: 1.5s;
+    transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes gradientRotate {
+    0% {
+        background-position: 0% 50%;
+        transform: rotate(0deg);
+    }
+    25% {
+        background-position: 100% 50%;
+        transform: rotate(90deg);
+    }
+    50% {
+        background-position: 100% 50%;
+        transform: rotate(180deg);
+    }
+    75% {
+        background-position: 0% 50%;
+        transform: rotate(270deg);
+    }
+    100% {
+        background-position: 0% 50%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes borderSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulsing Glow Effect */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(14, 239, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(14, 239, 255, 0.6);
+    }
+}
+
+.Home-img img {
+    animation: pulseGlow 2s ease-in-out infinite;
 }
 .Home-content h3{
     font-size: 32px;
@@ -1554,6 +1649,21 @@ h1, h2, h3, h4, h5, h6, p, span {
         height: 280px;
     }
     
+    /* Mobile Animation Adjustments */
+    .Home-img::before {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+    }
+    
+    .Home-img::after {
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+    }
+    
     .Home-content h1 {
         font-size: 36px;
         margin: 10px 0;
@@ -1823,5 +1933,20 @@ h1, h2, h3, h4, h5, h6, p, span {
         width: 100%;
         padding: 12px;
         font-size: 14px;
+    }
+    
+    /* Small Mobile Animation Adjustments */
+    .Home-img::before {
+        top: -6px;
+        left: -6px;
+        right: -6px;
+        bottom: -6px;
+    }
+    
+    .Home-img::after {
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
     }
 }
