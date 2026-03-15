@@ -13,7 +13,7 @@ html {
 
 /* Section Alignment and Spacing */
 section {
-    padding: 80px 0;
+    padding: 60px 0;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -74,7 +74,7 @@ body
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 70px 8% 0;
+    padding: 60px 6% 0;
     box-sizing: border-box;
 }
 
@@ -82,12 +82,12 @@ body
     flex: 1;
     max-width: 550px;
     z-index: 2;
-    padding-right: 40px;
+    padding-right: 30px;
 }
 
 .Home-img {
     flex: 0 0 auto;
-    margin-left: 30px;
+    margin-left: 20px;
     z-index: 1;
 }
 
@@ -177,13 +177,13 @@ body
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 70px 10% 0;
+    padding: 60px 6% 0;
 }
 
 .About-img {
     float: left; 
     margin-right: 30px;
-    margin-left: 65px; 
+    margin-left: 40px; 
 }
 .About-img img {
     width: 400px;
@@ -240,44 +240,11 @@ body
 
 .Skills{
     margin: 0 auto;
-    padding: 80px 10%;
+    padding: 60px 6%;
     color: #fff;
     width: 100%;
     text-align: center;
     background: #081b29;
-}
-
-.sub-title {
-    margin-top: 0; 
-    font-weight: bold;
-    font-size: 36px; 
-    margin-bottom: 30px
-}
-
-.container {
-    padding: 10px 0;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.columns {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-}
-
-.columns li {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-}
-
-.Skills{
-    margin: 20px 0;
-    padding: 10px;
 }
 
 .bar{
@@ -321,7 +288,7 @@ body
 .bar span.Database-Design { width: 82%; }
 
 .Projects {
-    padding: 80px 10%; 
+    padding: 60px 6%; 
     background-color: #081b29;
 }
 
@@ -366,7 +333,7 @@ body
 }
 
 .Experience {
-    padding: 80px 10%;
+    padding: 60px 6%;
     background-color: #081b29;
 }
 
@@ -620,13 +587,20 @@ body
 /* Responsive Design */
 @media (max-width: 1200px) {
     .Home {
-        padding: 70px 5% 0;
+        padding: 60px 4% 0;
     }
     
     .Skills, .Projects, .Experience, .Contact {
-        padding: 80px 4%;
+        padding: 60px 4%;
     }
-}
+    
+    .About {
+        padding: 60px 4% 0;
+    }
+    
+    .About-img {
+        margin-left: 20px;
+    }
     
     .About-img2 {
         right: 30px;
@@ -639,7 +613,7 @@ body
 
 @media (max-width: 991px) {
     .header {
-        padding: 15px 5%;
+        padding: 15px 4%;
     }
     
     .menu-toggle {
@@ -672,7 +646,21 @@ body
     .Home {
         flex-direction: column;
         text-align: center;
-        padding: 100px 5% 0;
+        padding: 80px 4% 0;
+        justify-content: center;
+    }
+    
+    .Home-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+        order: 1;
+        padding-right: 0;
+    }
+    
+    .Home-img {
+        margin-left: 0;
+        margin-top: 20px;
+        order: 2;
     }
     
     .About-img2 {
@@ -686,8 +674,9 @@ body
     }
     
     .About {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
+        padding: 60px 4% 0;
     }
     
     .About-img {
@@ -709,7 +698,42 @@ body
     .Contact {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 30px 5% 0;
+        padding: 50px 4% 0;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 10px;
+    }
+}
+
+/* Tablet specific adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .Home {
+        padding: 60px 5% 0;
+    }
+    
+    .Skills, .Projects, .Experience, .Contact {
+        padding: 60px 5%;
+    }
+    
+    .About {
+        padding: 60px 5% 0;
+    }
+    
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .project {
+        width: calc(50% - 15px);
     }
 }
 
@@ -822,9 +846,10 @@ body
         justify-content: center;
     }
 }
+
 /* Modern Skills Section */
 .Skills {
-    padding: 80px 0;
+    padding: 60px 0;
     background: linear-gradient(135deg, #081b29 0%, #0a1e33 50%, #081b29 100%);
 }
 
@@ -841,10 +866,11 @@ body
 
 .skills-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .skill-category {
@@ -1149,6 +1175,7 @@ body
     line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 8;
+    line-clamp: 8;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1431,7 +1458,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 /* Contact Section - Fix title alignment */
 .Contact {
     display: block;
-    padding: 80px 8% !important;
+    padding: 60px 6% !important;
     background: #081b29;
     text-align: center;
 }
@@ -1457,7 +1484,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 /* Adjust other sections spacing */
 .Skills, .Projects, .Experience {
-    padding: 80px 8% !important;
+    padding: 60px 6% !important;
 }
 
 /* Center all section titles */
@@ -1494,84 +1521,293 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 /* Better Mobile Responsive Design */
 @media (max-width: 768px) {
+    /* Reduce section padding for mobile */
+    section {
+        padding: 40px 0;
+        min-height: auto;
+    }
+    
+    /* Home Section Mobile */
+    .Home {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 3% 0;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    
+    .Home-content {
+        max-width: 100%;
+        margin-bottom: 25px;
+        order: 1;
+        padding-right: 0;
+    }
+    
+    .Home-img {
+        margin-left: 0;
+        margin-top: 20px;
+        order: 2;
+    }
+    
+    .Home-img img {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .Home-content h1 {
+        font-size: 36px;
+        margin: 10px 0;
+    }
+    
+    .Home-content h3 {
+        font-size: 22px;
+        margin: 8px 0;
+    }
+    
+    .Home-content p {
+        font-size: 16px;
+        margin: 15px 0;
+        line-height: 1.5;
+    }
+    
+    .btn-container {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
     /* About Section Mobile */
     .About {
         flex-direction: column;
         text-align: center;
-        padding: 60px 5% 0;
+        padding: 50px 3% 0;
+        min-height: auto;
     }
     
     .About-img {
-        margin: 0 auto 30px;
+        margin: 0 auto 25px;
         order: 1;
+    }
+    
+    .About-img img {
+        width: 220px;
+        height: 220px;
     }
     
     .About-text {
         order: 2;
     }
     
-    /* Projects Mobile */
-    .container2 {
-        padding: 0 5%;
+    .About-text h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
     }
     
-    .project {
-        margin-bottom: 30px;
-        padding: 20px;
+    .About-text h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
     }
     
-    /* Contact Mobile */
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 0 5%;
-    }
-    
-    .contact-text {
-        text-align: center;
-        margin-bottom: 30px;
+    .About-text p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
     }
     
     /* Skills Mobile */
+    .Skills {
+        padding: 50px 3% !important;
+    }
+    
     .skills-categories {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 25px;
     }
     
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .skill-item {
+        padding: 15px;
+    }
+    
+    /* Projects Mobile */
+    .Projects {
+        padding: 50px 3% !important;
+    }
+    
+    .container2 {
+        padding: 0;
+    }
+    
+    .project {
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 20px;
+    }
+    
+    .project h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .project p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    /* Experience Mobile */
+    .Experience {
+        padding: 50px 3% !important;
+    }
+    
+    .experience {
+        margin-bottom: 25px;
+        padding: 20px;
+    }
+    
+    .experience h3 {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+    
+    .experience p {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+    
+    /* Contact Mobile */
+    .Contact {
+        padding: 50px 3% !important;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0;
+    }
+    
+    .contact-text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .contact-text h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .contact-text p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-list li {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 12px;
+        margin-bottom: 15px;
     }
 }
 
 @media (max-width: 480px) {
     /* Extra small mobile adjustments */
     section {
-        padding: 60px 0;
+        padding: 30px 0;
+    }
+    
+    .Home {
+        padding: 40px 2% 0;
     }
     
     .Skills, .Projects, .Experience, .Contact {
-        padding: 60px 3% !important;
+        padding: 40px 2% !important;
+    }
+    
+    .Home-img img {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .Home-content h1 {
+        font-size: 28px;
+    }
+    
+    .Home-content h3 {
+        font-size: 18px;
+    }
+    
+    .Home-content p {
+        font-size: 14px;
     }
     
     .sub-title {
-        font-size: 32px !important;
+        font-size: 24px !important;
+        margin-bottom: 20px;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .btn-box {
+        width: 180px;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .About-text h2 {
+        font-size: 24px;
+    }
+    
+    .About-text h4 {
+        font-size: 16px;
+    }
+    
+    .About-text p {
+        font-size: 13px;
+    }
+    
+    .About-img img {
+        width: 180px;
+        height: 180px;
     }
     
     .project h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .project p {
-        font-size: 14px;
-        line-height: 1.5;
+        font-size: 13px;
     }
     
     .experience h3 {
-        font-size: 18px;
-        line-height: 1.4;
+        font-size: 16px;
     }
     
     .experience p {
+        font-size: 13px;
+    }
+    
+    .contact-text h2 {
+        font-size: 28px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
         font-size: 14px;
     }
 }
