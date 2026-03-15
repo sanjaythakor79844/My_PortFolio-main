@@ -12,19 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500);
 });
 
-// Navbar scroll behavior
-window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('.navbar');
-    var logo = document.querySelector('.logo');
+// Navbar scroll behavior - DISABLED to keep navbar always visible
+// window.addEventListener('scroll', function() {
+//     var navbar = document.querySelector('.navbar');
+//     var logo = document.querySelector('.logo');
     
-    if (window.scrollY === 0) { 
-        navbar.style.display = 'block'; 
-        logo.style.display = 'block';
-    } else {
-        navbar.style.display = 'none'; 
-        logo.style.display = 'none';
-    }
-});
+//     if (window.scrollY === 0) { 
+//         navbar.style.display = 'block'; 
+//         logo.style.display = 'block';
+//     } else {
+//         navbar.style.display = 'none'; 
+//         logo.style.display = 'none';
+//     }
+// });
 
 // Resume download function
 function downloadResume() {
@@ -43,11 +43,11 @@ function redirectToAccessPage() {
     window.location.href = "request_access_page.html";
 }
 
-// Mobile menu toggle
-function toggleMobileMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
+// Mobile menu toggle - DISABLED (navbar always visible)
+// function toggleMobileMenu() {
+//     const navbar = document.querySelector('.navbar');
+//     navbar.classList.toggle('active');
+// }
 
 // Contact Form with EmailJS
 document.addEventListener('DOMContentLoaded', function() {

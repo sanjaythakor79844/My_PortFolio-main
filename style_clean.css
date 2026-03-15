@@ -711,31 +711,30 @@ body
         padding: 15px 4%;
     }
     
+    /* Keep navbar visible - no hamburger menu */
     .menu-toggle {
-        display: flex;
-    }
-    
-    .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: rgba(8, 27, 41, 0.95);
-        backdrop-filter: blur(10px);
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
         display: none;
     }
     
-    .navbar.active {
-        display: block;
+    .navbar {
+        display: flex !important;
+        position: static;
+        width: auto;
+        padding: 0;
+        background: transparent;
+        backdrop-filter: none;
+        border-top: none;
+        box-shadow: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
     
     .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        display: inline-block;
+        font-size: 18px;
+        margin: 0;
+        padding: 5px 10px;
     }
     
     .Home {
@@ -1620,6 +1619,25 @@ h1, h2, h3, h4, h5, h6, p, span {
     section {
         padding: 40px 0;
         min-height: auto;
+    }
+    
+    /* Keep navbar visible on mobile */
+    .header {
+        padding: 15px 3%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .navbar {
+        display: flex !important;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .navbar a {
+        font-size: 16px;
+        padding: 5px 8px;
     }
     
     /* Home Section Mobile */
