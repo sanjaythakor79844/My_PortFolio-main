@@ -2,272 +2,366 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortFolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Sanjay Thakor - Data Science Enthusiast, Machine Learning Developer, and Web Developer Portfolio">
+    <meta name="keywords" content="Data Science, Machine Learning, Web Development, Python, Power BI, Portfolio">
+    <meta name="author" content="Sanjay Thakor">
+    <title>Sanjay Thakor - Data Science Portfolio</title>
+    <link rel="stylesheet" href="style_clean.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css">
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
         <header class="header">
-            <a href="#" class="logo">PortFolio</a>
+            <a href="#" class="logo">Portfolio</a>
+            
+            <div class="menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
             <nav class="navbar">
-                <a href="#Home" >Home</a>
-                <a href="#About" >About</a>
-                <a href="#Skills" >Skills</a>
-                <a href="#Projects" >Projects</a>
-                <a href="#Experience" >Experience</a>
-                <a href="#Contact" >Contact</a>
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Experience">Experience</a>
+                <a href="#Contact">Contact</a>
             </nav>
         </header>
     <section id="Home" class="Home">  
-        <div class="Home-conmtent">
+        <div class="Home-content">
             <h3>Hello, It's Me</h3>
-            <h1> Sanjay Thakor</h1>
+            <h1>Sanjay Thakor</h1>
             <h3>And I'm a <span class="text"></span></h3>
-            <p> I'm a Data Science Enthuasiats 
-                <br>Turning data into 📈 insights for better decisions<br> 📊 with the knowledge of Data Science Techniques.</p>
-            </p>
-            <div class="About-img2">
-                <img src="images/San.jpg">
-            </div>
+            <p>AI Automation & Data Science Professional 
+                <br>Transforming workflows with intelligent automation<br>Turning data into actionable insights for business growth</p>
+            
             <div class="Home-sci">
-                <a href="https://www.instagram.com/sanjaythakor2965/"><i class='bx bxl-instagram' ></i></a>
-                <a href="https://wa.me/7359899067"><i class='bx bxl-whatsapp' ></i></a>
-                <a href="https://github.com/sanjaythakor79844"><i class='bx bxl-github' ></i></a>
-                <a href="https://www.linkedin.com/in/sanjay-thakor-904500326/"><i class='bx bxl-linkedin' ></i></a>
-                
+                <a href="https://www.instagram.com/sanjaythakor2965/" target="_blank" aria-label="Instagram" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white;"><i class='bx bxl-instagram'></i></a>
+                <a href="https://wa.me/7359899067" target="_blank" aria-label="WhatsApp" style="background: #25D366; color: white;"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://github.com/sanjaythakor79844" target="_blank" aria-label="GitHub" style="background: #333; color: white;"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/sanjay-thakor-904500326/" target="_blank" aria-label="LinkedIn" style="background: #0077B5; color: white;"><i class='bx bxl-linkedin'></i></a>
             </div>
-            <a href="mailto:sanjaythakor79844@gmail.com" class="btn-box">Hire Me !</a>
-            <a href="#" class="btn-box" onclick="redirectToAccessPage()">Resume</a>
+
+            <div class="btn-container">
+                <a href="mailto:sanjaythakor79844@gmail.com" class="btn-box">Hire Me</a>
+                <a href="#" class="btn-box" onclick="redirectToAccessPage()">Download Resume</a>
+            </div>
+        </div>
+        
+        <div class="Home-img">
+            <img src="images/guru1.png" alt="Sanjay Thakor Profile Picture">
         </div>
     </section>
-    <span class="Home-imgHover"></span>
 
     <section class="About" id="About">
         <div class="About-img">
-            <img src="images/San.jpg">
+            <img src="images/guru1.png" alt="Sanjay Thakor About Image">
         </div>
         <div class="About-text">
-            <h2>About<span>Me</span></h2>
-            <h4>Data Enthusiast!</h4>
-            <p>I am a 4th-year Computer Engineering student at Saffrony Institute of Technology. I have gained hands-on knowledge of technology through academic projects and internships, which have provided me with a strong understanding of different tools and their real-world applications.
+            <h2>About<span> Me</span></h2>
+            <h4>Full-Stack Developer & AI Automation Expert</h4>
+            <p>I am a 4th-year Computer Engineering student at Saffrony Institute of Technology with extensive hands-on experience through academic projects and professional internships, including a recent 3-month AI Automation internship at KRP Academy.
 
-I am passionate about Data Science, Machine Learning, Data Analysis, and Web Development, and I am eager to contribute to a team through impactful projects. My skills include data wrangling, data mining, feature engineering, exploratory data analysis, and building prediction models for supervised and unsupervised datasets using various algorithms. I am also proficient in data visualization tools like Power BI to create dashboards and provide actionable insights for business decision-making.</p>
-            <a href="#" class="btn-box">More About Me</a>
+I am passionate about Data Science, Machine Learning, AI Automation, and Web Development. My expertise includes developing enterprise-grade systems like Instagram CRM Automation platforms, data analysis, feature engineering, and building prediction models. I am proficient in automation tools like N8n, social media automation, API integrations, full-stack web development, and data visualization tools like Power BI.
+
+Through my internships at KRP Academy, KultureHire, and TechSaksham (Microsoft & SAP), I have developed expertise in workflow automation, advanced data science techniques, SQL database management, and AI/ML model development.</p>
+            <a href="#Contact" class="btn-box">Get In Touch</a>
         </div>
     </section>
-    <br>
-    <section>
-        <div class="Skills" id="Skills">
-            <div class="container">
-                <h1 class="sub-title">My<span>Skills</span></h1>
-                <br>
-            <div class="columns">
-                <li><h3>Python</h3>
-                    <span class="bar"><span class="Python" data-percent="80"></span>
-                </li>
-    
-                <li><h3>MySql</h3>
-                    <span class="bar"><span class="MySql" data-percent="65"></span>
-                </li>
-    
-                <li><h3>Power-BI</h3>
-                    <span class="bar"><span class="Power-BI" data-percent="80"></span>
-                </li>
-    
-                <li><h3>Data Handling</h3>
-                    <span class="bar"><span class="Data Handling" data-percent="90"></span>
-                </li>
-    
-                <li><h3>Machine Learning</h3>
-                    <span class="bar"><span class="Machine Learning" data-percent="75"></span>
-                </li>
-    
-                <li><h3>Data Visualization</h3>
-                    <span class="bar"><span class="Data Visualization" data-percent="80"></span>
-                </li>
-    
-                <li><h3>EDA</h3>
-                    <span class="bar"><span class="EDA" data-percent="95"></span>
-                </li>
+    <section class="Skills" id="Skills">
+        <div class="container">
+                <h1 class="sub-title" style="text-align: center !important; width: 100% !important;">My <span>Skills</span></h1>
+                <p class="skills-intro">Expertise across multiple domains with hands-on experience in enterprise-level projects</p>
+                
+                <div class="skills-categories">
+                    <!-- Programming & Development -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class='bx bx-code-alt'></i>
+                            Programming & Development
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Full-Stack Development</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <li><h3>Data wrangling</h3>
-                    <span class="bar"><span class="Data Wrangling" data-percent="75"></span>
-                </li>
-    
-            </div>
-            <div class="columns">
-                <li><h3>Insights From Data</h3>
-                    <span class="bar"><span class="Insights From Data" data-percent="90"></span>
-                </li>
-    
-                <li><h3>Problem Solving</h3>
-                    <span class="bar"><span class="Problem Solving" data-percent="70"></span>
-                </li>
-    
-                <li><h3>Java</h3>
-                    <span class="bar"><span class="Java" data-percent="80"></span>
-                </li>
-    
-                <li><h3>Data analysis</h3>
-                    <span class="bar"><span class="Data Analysis" data-percent="80"></span>
-                </li>
-    
-                <li><h3>Agentic AI<h3>
-                    <span class="bar"><span class="Apache Spark" data-percent="40"></span>
-                </li>
-    
-                <li><h3>C Programming</h3>
-                    <span class="bar"><span class="Feature engineering" data-percent="80"></span>
-                </li>    
-            </div>    
-            </div>
+                    <!-- Data Science & Analytics -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class='bx bx-data'></i>
+                            Data Science & Analytics
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Machine Learning</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Data Analysis</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Power BI</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database & Backend -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class='bx bx-server'></i>
+                            Database & Backend
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">MySQL</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Database Design</span>
+                                    <span class="skill-percentage">82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="82"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Real-time APIs</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise & Automation -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class='bx bx-cog'></i>
+                            Enterprise & Automation
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Enterprise Systems</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Problem Solving</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Data Visualization</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
-
     <section class="Projects" id="Projects">
         <div class="container2">
-            <h1 class="sub-title">My<span>Projects</span></h1>
+            <h1 class="sub-title" style="text-align: center !important; width: 100% !important;">My<span>Projects</span></h1>
             <br>
 
-            <div class="project">
-                <h3> PrecisionVision: ESP32-Powered Camera Measurement System</h3>
-                <p>This project implements an image-based object measurement and detection system using computer vision techniques. The system captures an image of the object, processes it to identify boundaries or features, and calculates physical measurements like height and width. It can be applied in real-time quality control, manufacturing inspection, or research applications, making it a valuable tool for precision analysis.</p>
-                <a href="https://github.com/sanjaythakor79844/streamlit-measurement-app" class="btn-box">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3> Potato Leaf Diseases Detection</h3>
-                <p>This project focuses on developing a machine learning-based system to detect and classify potato leaf diseases from images. Using computer vision and deep learning techniques, the model identifies different types of leaf infections to assist farmers in early diagnosis and treatment. The system enhances crop monitoring, reduces yield loss, and supports precision agriculture by providing an affordable and efficient solution for disease detection.</p>
-                <a href="https://github.com/sanjaythakor79844/AICTE-Internship-Potato-Leaf-Diseases-Dtection" class="btn-box">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Hotel Booking Cancellation Dashboard</h3>
-                <p>This project implements an interactive Excel-based dashboard to analyze hotel booking patterns, cancellations, and performance metrics. The dashboard provides visualizations, KPIs, and filtering options to explore trends and identify factors affecting cancellations. It can be applied in business analysis, revenue management, and customer retention strategies, enabling data-driven decisions for improved booking efficiency.</p>
-                <a href="https://github.com/sanjaythakor79844/Data-Analysis-Dashboard" class="btn-box">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>YouTube Data Analysis Using Python</h3>
-                <p>This project focuses on analyzing YouTube data using Python to gain insights into video performance, audience behavior, and content trends. It extracts data through the YouTube Data API, cleans and processes it, and evaluates metrics like views, likes, comments, and engagement rates. The project leverages Python libraries for visualization and reporting, enabling data-driven decisions for content optimization and audience engagement.</p>
-                <a href="https://github.com/sanjaythakor79844/You-Tube-Data-Anaysis" class="btn-box">View Project</a>
-            </div>
-    
-            <div class="project">
-                <h3>E-Commerce Sales Data Analysis</h3>
-                <p>his project analyzes sales and profit data for an e-commerce business to uncover trends, performance metrics, and improvement opportunities. It evaluates monthly sales and profit, category and sub-category performance, customer segments, and the sales-to-profit ratio. Using Python libraries for data cleaning, visualization, and analysis, the project provides actionable insights to support data-driven business decision-making and strategy development.</p>
-                <a href="https://github.com/sanjaythakor79844/E-Commerce-Sales-Data-Analysis" class="btn-box">View Project</a>
-            </div>
-    
-            <div class="project">
-                <h3>Phoneपे-Data-Analysis-using-Power-BI</h3>
-                <p>This project implements an interactive Power BI dashboard to analyze PhonePe’s transactional data and provide insights into payment patterns, user behavior, and regional performance. It visualizes key metrics such as transaction volume, value, user demographics, and payment methods. The dashboard enables stakeholders to track trends, identify growth opportunities, and make data-driven decisions to enhance business strategies and customer engagement.</p>
-                <a href="https://github.com/sanjaythakor79844/Phone-Data-Analysis-using-Power-Bi" class="btn-box">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Starbucks Sales Dashboard</h3>
-                <p> This project implements an interactive Power BI dashboard to analyze Starbucks sales performance. It provides insights into total revenue (70.58M), total quantity (243K), sales trends by hour, day, and month, product categories, and top-performing store locations. The dashboard helps identify peak sales periods, customer preferences, and regional performance, enabling data-driven decisions for improved business strategy.</p>
-                <a href="https://github.com/sanjaythakor79844/Starbuck-Data-Analysis-" class="btn-box">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Random Username Generator</h3>
-                <p>This project is a Python-based tool that generates unique and creative usernames for social media or gaming platforms. It combines random adjectives and nouns, with options to customize length, include numbers or special characters, and save results to a file. The program features interactive input, making it a simple yet versatile solution for generating fun usernames.</p>
-                <a href="https://github.com/sanjaythakor79844/Random_User_name_Generater" class="btn-box">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Hotel Booking</h3>
-                <p>This project is a full-stack web application that allows users to search, browse, and book hotel rooms online. It includes user authentication, hotel and room browsing, availability checking, booking, and payment options. The platform also features an admin panel to manage hotels, rooms, and bookings. Designed for a seamless user experience, it is responsive and supports interactive features such as booking history, room selection, and real-time availability.</p>
-                <a href="https://github.com/sanjaythakor79844/Hotel_Booking_website" class="btn-box">View Project</a>
+            <div class="project instagram-crm">
+                <div class="project-header">
+                    <div class="project-logo instagram-logo">
+                        <div class="logo-circle">
+                            <i class='bx bxl-instagram'></i>
+                            <span class="logo-text">CRM</span>
+                        </div>
+                    </div>
+                </div>
+                <h3>Instagram CRM Automation System</h3>
+                <p>Built a complete enterprise CRM system that automates Instagram lead capture and management for marketing agencies. The system features real-time Instagram DM processing with intelligent AI-powered lead classification and automated response system. Developed using React.js frontend with Node.js backend, MongoDB database, and integrated with Instagram Graph API. The production-ready system handles multi-agency support with complete data isolation and scalable architecture. Key achievements include 80% cost reduction in manual lead management, 35% improvement in conversion rates, and 99.9% system uptime with enterprise-level security and comprehensive error handling.</p>
+                <a href="#" class="btn-box" onclick="alert('This is a confidential enterprise system currently in production use by marketing agencies.')">Private System</a>
             </div>
         </div>
     </section>
+
     <section class="Experience" id="Experience">
         <div class="container3">
-            <h1 class="sub-title"><span>Experience</span></h1>
+            <h1 class="sub-title" style="text-align: center !important; width: 100% !important;"><span>Experience</span></h1>
             <br>    
             <div class="experience">
-                <h3>  Summer Internship – Data Analytics & Machine Learning - remote July 02 2025 - July 16 2025</h3>
+                <h3>AI Automation Internship — KRP Academy - Remote (3 Months) - Recent 2024</h3>
                 <br>
                 <br>    
-                <p> ● Completed a two-week internship in Data Analytics and Machine Learning.</p>
-                <p> ● Handled API data and performed analysis using pandas. </p>
-                <p> ● Created visualizations with matplotlib and Power BI, and implemented basic regression models. </p>
-                <p> ● Gained practical experience in real-world data workflows and enhanced analytical and problem-solving skills. </p>
+                <p> • Completed a comprehensive 3-month AI Automation internship program.</p>
+                <p> • Worked with N8n workflow automation platform for creating intelligent automation solutions. </p>
+                <p> • Developed and integrated Meta Facebook applications with automated workflows. </p>
+                <p> • Created WhatsApp automation systems for business communication and customer engagement. </p>
+                <p> • Built Instagram automation tools for social media management and content scheduling. </p>
+                <p> • Implemented Telegram automation bots for enhanced user interaction and notifications. </p>
+                <p> • Developed attendance management systems with automated tracking and reporting features. </p>
+                <p> • Gained expertise in API integrations, webhook configurations, and cross-platform automation. </p>
                 <br>
                 <br>
-                <a href="certificates/Saup.pdf" class="btn-box">Certificate</a>
-                <a href="certificates/CodeClauseLOR.pdf" class="btn-box">LOR</a>
+                <a href="certificates/KRP ACADEMY OFFER LETTER (5).pdf" class="btn-box" target="_blank">Offer Letter</a>
             </div>
             <br>
             <br>
-
-
 
             <div class="experience">
-                <h3> Data Analysis Internship – KultureHire- remote Oct 2024 - Dec 2024 
-                </h3>
+                <h3>Summer Internship — Data Analytics & Machine Learning - Remote July 02 2024 - July 16 2024</h3>
                 <br>
                 <br>    
-                <p>●Learned SQL to manage and analyze databases efficiently. </p>
-                <p>●Tackled problem-solving tasks, enhancing critical thinking skills. </p>
-                <p>●Developed Excel dashboards to provide actionable data insights. </p>
-                <p>●Gained hands-on experience by working on real-time projects.. </p>
+                <p> • Completed a two-week internship in Data Analytics and Machine Learning.</p>
+                <p> • Handled API data and performed analysis using pandas. </p>
+                <p> • Created visualizations with matplotlib and Power BI, and implemented basic regression models. </p>
+                <p> • Gained practical experience in real-world data workflows and enhanced analytical and problem-solving skills. </p>
                 <br>
                 <br>
-                <a href="certificates/certificate-data-analyst-internship-664c6ed1df30c100430a18ea (2).pdf" class="btn-box">Certificate</a>
+                <a href="certificates/Saup.pdf" class="btn-box" target="_blank">Certificate</a>
             </div>
             <br>
             <br>
-
 
             <div class="experience">
-                <h3>   AI: Transformative Learning with TechSaksham (Microsoft & SAP) - remote Jan 2025 -Feb  2025</h3>
+                <h3>Data Analysis Internship — KultureHire - Remote Oct 2024 - Dec 2024</h3>
                 <br>
                 <br>    
-                <p> ● Developed a CNN-based deep learning model to detect potato leaf diseases.</p>
-                <p> ● Gained hands-on experience in AI, machine learning, and computer vision.</p>
-                <p> ● Performed data preprocessing, model training, and evaluation using Python, TensorFlow, Keras, and OpenCV.</p>
-                <p> ● Improved model accuracy through hyperparameter tuning and data augmentation.</p>
+                <p> • Learned SQL to manage and analyze databases efficiently. </p>
+                <p> • Tackled problem-solving tasks, enhancing critical thinking skills. </p>
+                <p> • Developed Excel dashboards to provide actionable data insights. </p>
+                <p> • Gained hands-on experience by working on real-time projects. </p>
                 <br>
                 <br>
-                <a href="certificates/SANJAY THAKOR_certificate.pdf" class="btn-box">Certificate</a>
+                <a href="certificates/certificate-data-analyst-internship-664c6ed1df30c100430a18ea (2).pdf" class="btn-box" target="_blank">Certificate</a>
             </div>
+            <br>
+            <br>
 
+            <div class="experience">
+                <h3>AI: Transformative Learning with TechSaksham (Microsoft & SAP) - Remote Jan 2025 - Feb 2025</h3>
+                <br>
+                <br>    
+                <p> • Developed a CNN-based deep learning model to detect potato leaf diseases.</p>
+                <p> • Gained hands-on experience in AI, machine learning, and computer vision.</p>
+                <p> • Performed data preprocessing, model training, and evaluation using Python, TensorFlow, Keras, and OpenCV.</p>
+                <p> • Improved model accuracy through hyperparameter tuning and data augmentation.</p>
+                <br>
+                <br>
+                <a href="certificates/SANJAY THAKOR_certificate.pdf" class="btn-box" target="_blank">Certificate</a>
+            </div>
 
         </div>
     </section>
 
     <section class="Contact" id="Contact">
-        <div class="contact-text">
-            <h2>Contact<span>Me</span></h2>
-            <h4>Let's Work Together</h4>
-            <p>Turning data into 📈 insights for better decisions 📊</p>
-            <div class="contact-list">
-               <li><i class="bx bxs-send"></i>sanjaythakor79844@gmail.com</li>
-               <li><i class="bx bxs-phone"></i>7984460572</li>
+        <h2 style="text-align: center !important; width: 100% !important; font-size: 50px; margin-bottom: 40px;">Contact <span style="color: #0ef;">Me</span></h2>
+        
+        <div class="contact-container">
+            <div class="contact-text">
+                <h4>Let's Work Together</h4>
+                <p>Ready to discuss your next project? I'm here to help transform your ideas into reality.</p>
+                
+                <div class="contact-list">
+                    <li><i class="bx bxs-envelope"></i>sanjaythakor79844@gmail.com</li>
+                    <li><i class="bx bxs-phone"></i>+91 7984460572</li>
+                    <li><i class="bx bxs-map"></i>Gujarat, India</li>
+                    <li><i class="bx bxs-time"></i>Available for freelance work</li>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/sanjay-thakor-904500326/" target="_blank" style="background: #0077B5; color: white;"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/sanjaythakor79844" target="_blank" style="background: #333; color: white;"><i class='bx bxl-github'></i></a>
+                    <a href="https://wa.me/7359899067" target="_blank" style="background: #25D366; color: white;"><i class='bx bxl-whatsapp'></i></a>
+                </div>
             </div>
-            
-        </div>
 
-        <div class="contact-form">
-            <form action="submit.php" method="post">
-                <input type="" placeholder="Enter Your Name" required>
-                <input type="email" placeholder="Enter Your Email">
-
-                <input type="" placeholder="Enter Your Subject">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
-            <input type="submit" value="submit" class="send">
-            </form>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Your Full Name" required>
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <input type="submit" value="Send Message" class="send">
+                </form>
+                <div id="responseMessage"></div>
+            </div>
         </div>
     </section>
   
