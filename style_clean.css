@@ -1712,7 +1712,7 @@ h1, h2, h3, h4, h5, h6, p, span {
     }
 }
 
-/* STRONGEST MOBILE HOME LAYOUT - OVERRIDE ALL OTHER RULES */
+/* MOBILE = LAPTOP EXACT SAME LAYOUT */
 @media screen and (max-width: 768px) {
     .Home {
         display: flex !important;
@@ -1722,48 +1722,50 @@ h1, h2, h3, h4, h5, h6, p, span {
         justify-content: space-between !important;
         align-items: center !important;
         min-height: 100vh !important;
-        gap: 15px !important;
+        gap: 20px !important;
     }
     
     .Home-content {
         flex: 1 !important;
-        max-width: 55% !important;
+        max-width: 600px !important;
         margin-bottom: 0 !important;
         order: 1 !important;
-        padding-right: 15px !important;
+        padding-right: 30px !important;
         text-align: left !important;
     }
     
     .Home-img {
         flex: 0 0 auto !important;
         margin: 0 !important;
+        margin-left: 20px !important;
         order: 2 !important;
         align-self: center !important;
-        margin-left: 0 !important;
         margin-top: 0 !important;
     }
     
     .Home-img img {
-        width: 220px !important;
-        height: 220px !important;
+        width: 300px !important;
+        height: 300px !important;
     }
     
     .Home-content h1 {
-        font-size: 30px !important;
+        font-size: 45px !important;
         margin: 10px 0 !important;
         line-height: 1.2 !important;
         text-align: left !important;
+        font-weight: 700 !important;
     }
     
     .Home-content h3 {
-        font-size: 20px !important;
+        font-size: 28px !important;
         margin: 8px 0 !important;
         line-height: 1.3 !important;
         text-align: left !important;
+        font-weight: 700 !important;
     }
     
     .Home-content p {
-        font-size: 15px !important;
+        font-size: 18px !important;
         margin: 15px 0 !important;
         line-height: 1.5 !important;
         padding: 0 !important;
@@ -1772,30 +1774,111 @@ h1, h2, h3, h4, h5, h6, p, span {
     
     .btn-container {
         justify-content: flex-start !important;
-        margin-top: 20px !important;
-        gap: 10px !important;
+        margin-top: 30px !important;
+        gap: 15px !important;
         flex-wrap: wrap !important;
     }
     
     .btn-box {
-        padding: 10px 18px !important;
-        font-size: 14px !important;
+        padding: 12px 28px !important;
+        font-size: 16px !important;
+        border-radius: 40px !important;
     }
     
     .Home-sci {
         justify-content: flex-start !important;
-        margin: 20px 0 !important;
-        gap: 10px !important;
+        margin: 30px 0 !important;
+        gap: 15px !important;
     }
     
     .Home-sci a {
-        width: 35px !important;
-        height: 35px !important;
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 20px !important;
+        margin: 0 !important;
+    }
+    
+    /* About Section - Laptop Like */
+    .About {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        align-items: center !important;
+        gap: 3rem !important;
+        padding: 80px 4% 0 !important;
+        min-height: 100vh !important;
+        text-align: left !important;
+    }
+    
+    .About-img {
+        justify-self: center !important;
+        margin: 0 !important;
+    }
+    
+    .About-img img {
+        width: 350px !important;
+        height: 350px !important;
+    }
+    
+    .About-text {
+        max-width: 100% !important;
+        text-align: left !important;
+    }
+    
+    .About-text h2 {
+        font-size: 50px !important;
+        text-align: left !important;
+    }
+    
+    .About-text h4 {
+        font-size: 24px !important;
+        text-align: left !important;
+    }
+    
+    .About-text p {
         font-size: 18px !important;
+        text-align: left !important;
+    }
+    
+    /* Skills Section - Laptop Like */
+    .Skills {
+        padding: 80px 4% !important;
+        min-height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    
+    .skills-categories {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px !important;
+    }
+    
+    /* Projects Section - Laptop Like */
+    .Projects {
+        padding: 80px 4% !important;
+        min-height: 100vh !important;
+    }
+    
+    .project {
+        width: calc(50% - 15px) !important;
+    }
+    
+    /* Contact Section - Laptop Like */
+    .Contact {
+        padding: 80px 4% !important;
+        min-height: 100vh !important;
+    }
+    
+    .contact-container {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 3rem !important;
+        align-items: center !important;
+        text-align: left !important;
     }
 }
 
-/* STRONGEST SMALL MOBILE HOME LAYOUT */
+/* SMALL MOBILE - STILL LAPTOP-LIKE BUT SMALLER */
 @media screen and (max-width: 480px) {
     .Home {
         padding: 70px 3% 20px !important;
@@ -1803,42 +1886,45 @@ h1, h2, h3, h4, h5, h6, p, span {
         text-align: left !important;
         justify-content: space-between !important;
         align-items: center !important;
-        gap: 10px !important;
+        gap: 15px !important;
     }
     
     .Home-content {
         flex: 1 !important;
-        max-width: 60% !important;
-        padding-right: 10px !important;
+        max-width: 500px !important;
+        padding-right: 20px !important;
         text-align: left !important;
     }
     
     .Home-img {
         flex: 0 0 auto !important;
         margin: 0 !important;
+        margin-left: 15px !important;
     }
     
     .Home-img img {
-        width: 160px !important;
-        height: 160px !important;
+        width: 220px !important;
+        height: 220px !important;
     }
     
     .Home-content h1 {
-        font-size: 26px !important;
+        font-size: 35px !important;
         line-height: 1.2 !important;
         text-align: left !important;
         margin: 8px 0 !important;
+        font-weight: 700 !important;
     }
     
     .Home-content h3 {
-        font-size: 18px !important;
+        font-size: 22px !important;
         line-height: 1.3 !important;
         text-align: left !important;
         margin: 6px 0 !important;
+        font-weight: 700 !important;
     }
     
     .Home-content p {
-        font-size: 13px !important;
+        font-size: 16px !important;
         line-height: 1.4 !important;
         padding: 0 !important;
         text-align: left !important;
@@ -1849,27 +1935,77 @@ h1, h2, h3, h4, h5, h6, p, span {
         justify-content: flex-start !important;
         flex-direction: row !important;
         align-items: flex-start !important;
-        gap: 8px !important;
+        gap: 12px !important;
         flex-wrap: wrap !important;
+        margin-top: 25px !important;
     }
     
     .btn-box {
         width: auto !important;
         text-align: center !important;
-        padding: 8px 14px !important;
-        font-size: 12px !important;
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+        border-radius: 40px !important;
     }
     
     .Home-sci {
         justify-content: flex-start !important;
-        margin: 15px 0 !important;
-        gap: 8px !important;
+        margin: 25px 0 !important;
+        gap: 12px !important;
     }
     
     .Home-sci a {
-        width: 32px !important;
-        height: 32px !important;
-        font-size: 16px !important;
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 18px !important;
+    }
+    
+    /* About Section - Smaller but still 2-column */
+    .About {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        align-items: center !important;
+        gap: 2rem !important;
+        padding: 70px 3% 0 !important;
+        text-align: left !important;
+    }
+    
+    .About-img img {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    
+    .About-text h2 {
+        font-size: 35px !important;
+    }
+    
+    .About-text h4 {
+        font-size: 20px !important;
+    }
+    
+    .About-text p {
+        font-size: 15px !important;
+    }
+    
+    /* Skills - 2x2 Grid */
+    .skills-categories {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .skill-category {
+        padding: 15px 10px !important;
+    }
+    
+    /* Projects - 2 columns */
+    .project {
+        width: calc(50% - 10px) !important;
+    }
+    
+    /* Contact - Still 2 columns */
+    .contact-container {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
     }
 }
 
