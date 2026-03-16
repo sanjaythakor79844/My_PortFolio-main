@@ -83,27 +83,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 6% 0;
+    padding: 80px 8% 0;
     box-sizing: border-box;
 }
 
 .Home-content {
     flex: 1;
-    max-width: 550px;
+    max-width: 600px;
     z-index: 2;
-    padding-right: 30px;
+    padding-right: 50px;
 }
 
 .Home-img {
     flex: 0 0 auto;
-    margin-left: 20px;
+    margin-left: 50px;
     z-index: 1;
     position: relative;
 }
 
 .Home-img img {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     object-fit: cover;
     position: relative;
@@ -276,28 +276,28 @@ body {
 .About{
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #081b29;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
-    padding: 60px 6% 0;
+    gap: 4rem;
+    padding: 80px 8% 0;
 }
 
 .About-img {
-    float: left; 
-    margin-right: 30px;
-    margin-left: 40px; 
+    justify-self: center;
 }
+
 .About-img img {
-    width: 400px;
-    height: auto;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .About-text {
-    max-width: 600px;
-    flex: 1;
+    max-width: 100%;
 }
 
 /* About-img2 - Only hide in About section */
@@ -344,11 +344,15 @@ body {
 
 .Skills{
     margin: 0 auto;
-    padding: 60px 6%;
+    padding: 80px 8%;
     color: #fff;
     width: 100%;
     text-align: center;
     background: #081b29;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .bar{
@@ -392,8 +396,12 @@ body {
 .bar span.Database-Design { width: 82%; }
 
 .Projects {
-    padding: 60px 6%; 
+    padding: 80px 8%; 
     background-color: #081b29;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container2 {
@@ -437,8 +445,12 @@ body {
 }
 
 .Experience {
-    padding: 60px 6%;
+    padding: 80px 8%;
     background-color: #081b29;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container3 {
@@ -688,30 +700,115 @@ body {
     transition: 0.3s;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .Home {
-        padding: 60px 4% 0;
+/* Desktop/Laptop View - Proper Layout */
+@media (min-width: 1201px) {
+    /* Ensure proper desktop layout */
+    .header {
+        padding: 20px 8%;
     }
     
-    .Skills, .Projects, .Experience, .Contact {
-        padding: 60px 4%;
+    .Home {
+        padding: 80px 8% 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .Home-content {
+        flex: 1;
+        max-width: 600px;
+        padding-right: 50px;
+    }
+    
+    .Home-img {
+        flex: 0 0 auto;
+        margin-left: 50px;
+    }
+    
+    .Home-img img {
+        width: 400px;
+        height: 400px;
     }
     
     .About {
-        padding: 60px 4% 0;
+        padding: 80px 8% 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+        min-height: 100vh;
     }
     
     .About-img {
-        margin-left: 20px;
+        margin: 0;
     }
     
-    .About-img2 {
-        right: 30px;
+    .About-img img {
+        width: 450px;
+        height: 450px;
     }
     
-    .About-img2 img {
+    .Skills, .Projects, .Experience {
+        padding: 80px 8%;
+    }
+    
+    .Contact {
+        padding: 80px 8% !important;
+    }
+    
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+    
+    .skills-categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .project {
+        width: calc(33.33% - 20px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) and (min-width: 1025px) {
+    .Home {
+        padding: 70px 6% 0;
+    }
+    
+    .Skills, .Projects, .Experience, .Contact {
+        padding: 70px 6%;
+    }
+    
+    .About {
+        padding: 70px 6% 0;
+    }
+    
+    .About-img {
+        margin-left: 30px;
+    }
+    
+    .About-img img {
+        width: 380px;
+        height: 380px;
+    }
+    
+    .Home-img img {
         width: 350px;
+        height: 350px;
+    }
+    
+    .skills-categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+    
+    .project {
+        width: calc(50% - 15px);
     }
 }
 
@@ -969,8 +1066,8 @@ body {
 
 .skills-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -1561,9 +1658,13 @@ h1, h2, h3, h4, h5, h6, p, span {
 /* Contact Section - Fix title alignment */
 .Contact {
     display: block;
-    padding: 60px 6% !important;
+    padding: 80px 8% !important;
     background: #081b29;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .Contact h2 {
@@ -1582,9 +1683,9 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 .contact-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
     text-align: left;
