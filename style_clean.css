@@ -765,8 +765,8 @@ body {
     }
     
     .skills-categories {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
     }
     
     .project {
@@ -803,8 +803,8 @@ body {
     }
     
     .skills-categories {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 35px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
     }
     
     .project {
@@ -1066,9 +1066,9 @@ body {
 
 .skills-categories {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -1822,32 +1822,36 @@ h1, h2, h3, h4, h5, h6, p, span {
         margin: 0;
     }
     
-    /* Home Section Mobile - Fix spacing and layout */
+    /* Home Section Mobile - Keep laptop-like layout */
     .Home {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        text-align: left;
         padding: 80px 4% 20px;
-        justify-content: flex-start;
+        justify-content: space-between;
+        align-items: center;
         min-height: 100vh;
         gap: 20px;
     }
     
     .Home-content {
-        max-width: 100%;
-        margin-bottom: 20px;
+        flex: 1;
+        max-width: 60%;
+        margin-bottom: 0;
         order: 1;
-        padding: 0 10px;
+        padding-right: 20px;
+        text-align: left;
     }
     
     .Home-img {
+        flex: 0 0 auto;
         margin: 0;
         order: 2;
         align-self: center;
     }
     
     .Home-img img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
     
     /* Mobile Animation Adjustments */
@@ -1866,33 +1870,41 @@ h1, h2, h3, h4, h5, h6, p, span {
     }
     
     .Home-content h1 {
-        font-size: 32px;
+        font-size: 28px;
         margin: 10px 0;
         line-height: 1.2;
+        text-align: left;
     }
     
     .Home-content h3 {
-        font-size: 20px;
+        font-size: 18px;
         margin: 8px 0;
         line-height: 1.3;
+        text-align: left;
     }
     
     .Home-content p {
-        font-size: 15px;
+        font-size: 14px;
         margin: 15px 0;
         line-height: 1.6;
-        padding: 0 10px;
+        padding: 0;
+        text-align: left;
     }
     
     .btn-container {
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 20px;
         gap: 10px;
     }
     
     .btn-box {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .Home-sci {
+        justify-content: flex-start;
+        margin: 15px 0;
     }
     
     /* About Section Mobile - Fix layout and text overflow */
@@ -1945,7 +1957,7 @@ h1, h2, h3, h4, h5, h6, p, span {
         overflow-wrap: break-word;
     }
     
-    /* Skills Mobile - Better spacing */
+    /* Skills Mobile - 2x2 grid layout */
     .Skills {
         padding: 40px 4% !important;
     }
@@ -1962,32 +1974,37 @@ h1, h2, h3, h4, h5, h6, p, span {
     }
     
     .skills-categories {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
         padding: 0;
     }
     
     .skill-category {
-        padding: 20px 15px;
+        padding: 15px 12px;
     }
     
     .category-title {
-        font-size: 18px;
-        gap: 10px;
-        margin-bottom: 15px;
+        font-size: 16px;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .category-title i {
+        font-size: 14px;
+        padding: 6px;
     }
     
     .skill-item {
-        padding: 12px;
+        padding: 10px;
     }
     
     .skill-name {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .skill-percentage {
-        font-size: 12px;
-        padding: 3px 8px;
+        font-size: 11px;
+        padding: 2px 6px;
     }
     
     /* Projects Mobile - Better layout */
@@ -2150,49 +2167,107 @@ h1, h2, h3, h4, h5, h6, p, span {
     
     .Home {
         padding: 70px 3% 20px;
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .Home-content {
+        flex: 1;
+        max-width: 65%;
+        padding-right: 15px;
+        text-align: left;
+    }
+    
+    .Home-img {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+    
+    .Home-img img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .Home-content h1 {
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: left;
+    }
+    
+    .Home-content h3 {
+        font-size: 16px;
+        line-height: 1.3;
+        text-align: left;
+    }
+    
+    .Home-content p {
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .btn-container {
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .btn-box {
+        width: auto;
+        text-align: center;
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    
+    .Home-sci {
+        justify-content: flex-start;
+        margin: 10px 0;
+    }
+    
+    /* Skills adjustments for small screens - Stack vertically */
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .skill-category {
+        padding: 12px 8px;
+    }
+    
+    .category-title {
+        font-size: 14px;
+        gap: 6px;
+    }
+    
+    .category-title i {
+        font-size: 12px;
+        padding: 4px;
+    }
+    
+    .skill-item {
+        padding: 8px;
+    }
+    
+    .skill-name {
+        font-size: 12px;
+    }
+    
+    .skill-percentage {
+        font-size: 10px;
+        padding: 2px 5px;
     }
     
     .Skills, .Projects, .Experience, .Contact {
         padding: 30px 3% !important;
     }
     
-    .Home-img img {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .Home-content h1 {
-        font-size: 28px;
-        line-height: 1.2;
-    }
-    
-    .Home-content h3 {
-        font-size: 18px;
-        line-height: 1.3;
-    }
-    
-    .Home-content p {
-        font-size: 14px;
-        line-height: 1.6;
-        padding: 0 5px;
-    }
-    
     .sub-title {
         font-size: 24px !important;
         margin-bottom: 15px !important;
-    }
-    
-    .btn-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    .btn-box {
-        width: 160px;
-        text-align: center;
-        padding: 8px 16px;
-        font-size: 13px;
     }
     
     .About-text h2 {
@@ -2279,44 +2354,16 @@ h1, h2, h3, h4, h5, h6, p, span {
     
     /* Small Mobile Animation Adjustments */
     .Home-img::before {
-        top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
     }
     
     .Home-img::after {
-        top: -3px;
-        left: -3px;
-        right: -3px;
-        bottom: -3px;
-    }
-    
-    /* Skills adjustments for small screens */
-    .skill-category {
-        padding: 15px 10px;
-    }
-    
-    .category-title {
-        font-size: 16px;
-        gap: 8px;
-    }
-    
-    .category-title i {
-        font-size: 16px;
-        padding: 6px;
-    }
-    
-    .skill-item {
-        padding: 10px;
-    }
-    
-    .skill-name {
-        font-size: 13px;
-    }
-    
-    .skill-percentage {
-        font-size: 11px;
-        padding: 2px 6px;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
     }
 }
