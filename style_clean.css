@@ -843,25 +843,7 @@ body {
         padding: 5px 10px;
     }
     
-    .Home {
-        flex-direction: column;
-        text-align: center;
-        padding: 80px 4% 0;
-        justify-content: center;
-    }
-    
-    .Home-content {
-        max-width: 100%;
-        margin-bottom: 30px;
-        order: 1;
-        padding-right: 0;
-    }
-    
-    .Home-img {
-        margin-left: 0;
-        margin-top: 20px;
-        order: 2;
-    }
+    /* REMOVED HOME SECTION - Will be handled by specific mobile breakpoints */
     
     .About-img2 {
         position: static;
@@ -938,17 +920,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .Home-content h1 {
-        font-size: 40px;
-    }
-    
-    .Home-content h3 {
-        font-size: 24px;
-    }
-    
-    .Home-content p {
-        font-size: 16px;
-    }
+    /* REMOVED CONFLICTING HOME RULES - Handled by specific mobile breakpoints */
     
     .About-text h2 {
         font-size: 40px;
@@ -1561,73 +1533,7 @@ h1, h2, h3, h4, h5, h6, p, span {
     border-radius: 50%;
 }
 
-/* Responsive Home Layout */
-@media (max-width: 1200px) {
-    .Home {
-        padding: 70px 5% 0;
-    }
-    
-    .Home-img {
-        margin-left: 30px;
-    }
-    
-    .Home-img img {
-        width: 350px;
-        height: 350px;
-    }
-}
-
-@media (max-width: 768px) {
-    .Home {
-        flex-direction: column;
-        text-align: center;
-        padding: 70px 5% 0;
-        justify-content: center;
-        min-height: 100vh;
-    }
-    
-    .Home-content {
-        max-width: 100%;
-        margin-bottom: 30px;
-        order: 1;
-    }
-    
-    .Home-img {
-        margin-left: 0;
-        margin-top: 20px;
-        order: 2;
-    }
-    
-    .Home-img img {
-        width: 280px;
-        height: 280px;
-    }
-    
-    .Home-content h1 {
-        font-size: 40px;
-    }
-    
-    .Home-content h3 {
-        font-size: 24px;
-    }
-    
-    .Home-content p {
-        font-size: 16px;
-        margin: 20px 0;
-    }
-    
-    .btn-container {
-        justify-content: center;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .Home {
-        padding: 60px 3% 0;
-    }
-    
-    .Home-img img {
+/* Responsive Home Layout - REMOVED CONFLICTING RULES */
         width: 220px;
         height: 220px;
     }
@@ -1803,6 +1709,167 @@ h1, h2, h3, h4, h5, h6, p, span {
     .Home-img {
         flex: 0 0 auto !important;
         order: 2 !important;
+    }
+}
+
+/* STRONGEST MOBILE HOME LAYOUT - OVERRIDE ALL OTHER RULES */
+@media screen and (max-width: 768px) {
+    .Home {
+        display: flex !important;
+        flex-direction: row !important;
+        text-align: left !important;
+        padding: 80px 4% 20px !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        min-height: 100vh !important;
+        gap: 15px !important;
+    }
+    
+    .Home-content {
+        flex: 1 !important;
+        max-width: 55% !important;
+        margin-bottom: 0 !important;
+        order: 1 !important;
+        padding-right: 15px !important;
+        text-align: left !important;
+    }
+    
+    .Home-img {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        order: 2 !important;
+        align-self: center !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    .Home-img img {
+        width: 220px !important;
+        height: 220px !important;
+    }
+    
+    .Home-content h1 {
+        font-size: 30px !important;
+        margin: 10px 0 !important;
+        line-height: 1.2 !important;
+        text-align: left !important;
+    }
+    
+    .Home-content h3 {
+        font-size: 20px !important;
+        margin: 8px 0 !important;
+        line-height: 1.3 !important;
+        text-align: left !important;
+    }
+    
+    .Home-content p {
+        font-size: 15px !important;
+        margin: 15px 0 !important;
+        line-height: 1.5 !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+    
+    .btn-container {
+        justify-content: flex-start !important;
+        margin-top: 20px !important;
+        gap: 10px !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .btn-box {
+        padding: 10px 18px !important;
+        font-size: 14px !important;
+    }
+    
+    .Home-sci {
+        justify-content: flex-start !important;
+        margin: 20px 0 !important;
+        gap: 10px !important;
+    }
+    
+    .Home-sci a {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 18px !important;
+    }
+}
+
+/* STRONGEST SMALL MOBILE HOME LAYOUT */
+@media screen and (max-width: 480px) {
+    .Home {
+        padding: 70px 3% 20px !important;
+        flex-direction: row !important;
+        text-align: left !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+    
+    .Home-content {
+        flex: 1 !important;
+        max-width: 60% !important;
+        padding-right: 10px !important;
+        text-align: left !important;
+    }
+    
+    .Home-img {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+    }
+    
+    .Home-img img {
+        width: 160px !important;
+        height: 160px !important;
+    }
+    
+    .Home-content h1 {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+        text-align: left !important;
+        margin: 8px 0 !important;
+    }
+    
+    .Home-content h3 {
+        font-size: 18px !important;
+        line-height: 1.3 !important;
+        text-align: left !important;
+        margin: 6px 0 !important;
+    }
+    
+    .Home-content p {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+        padding: 0 !important;
+        text-align: left !important;
+        margin: 12px 0 !important;
+    }
+    
+    .btn-container {
+        justify-content: flex-start !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .btn-box {
+        width: auto !important;
+        text-align: center !important;
+        padding: 8px 14px !important;
+        font-size: 12px !important;
+    }
+    
+    .Home-sci {
+        justify-content: flex-start !important;
+        margin: 15px 0 !important;
+        gap: 8px !important;
+    }
+    
+    .Home-sci a {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 16px !important;
     }
 }
 
