@@ -22,12 +22,21 @@ section {
     border: none;
 }
 
-body
-{
+/* Global Mobile Fixes */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
     color: #ededed !important;
     background: #081b29;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .header
 {
@@ -1557,6 +1566,20 @@ h1, h2, h3, h4, h5, h6, p, span {
     text-align: center;
 }
 
+.Contact h2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center !important;
+    margin-bottom: 40px;
+    color: #ededed;
+    width: 100%;
+    display: block;
+}
+
+.Contact h2 span {
+    color: #0ef;
+}
+
 .contact-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1613,58 +1636,117 @@ h1, h2, h3, h4, h5, h6, p, span {
     border: 2px solid rgba(59, 130, 246, 0.5);
     color: #3b82f6;
 }
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Fix text wrapping issues */
+    * {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Ensure all sections fit properly */
+    section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Fix container widths */
+    .container, .container2, .container3 {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    /* Better button spacing */
+    .btn-box {
+        display: inline-block;
+        margin: 5px;
+        white-space: nowrap;
+    }
+    
+    /* Fix social icons */
+    .Home-sci {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+    }
+    
+    .Home-sci a {
+        margin: 0;
+    }
+}
+
 /* Better Mobile Responsive Design */
 @media (max-width: 768px) {
     /* Reduce section padding for mobile */
     section {
-        padding: 40px 0;
+        padding: 30px 0;
         min-height: auto;
     }
     
-    /* Keep navbar visible on mobile */
+    /* Mobile header - make it more compact */
     .header {
-        padding: 15px 3%;
-        flex-direction: column;
-        gap: 15px;
+        padding: 10px 3%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(8, 27, 41, 0.95);
+        backdrop-filter: blur(10px);
+    }
+    
+    .logo {
+        font-size: 20px;
     }
     
     .navbar {
         display: flex !important;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 8px;
     }
     
     .navbar a {
-        font-size: 16px;
-        padding: 5px 8px;
+        font-size: 14px;
+        padding: 4px 8px;
+        margin: 0;
     }
     
-    /* Home Section Mobile */
+    /* Home Section Mobile - Fix spacing and layout */
     .Home {
         flex-direction: column;
         text-align: center;
-        padding: 50px 3% 0;
-        justify-content: center;
+        padding: 80px 4% 20px;
+        justify-content: flex-start;
         min-height: 100vh;
+        gap: 20px;
     }
     
     .Home-content {
         max-width: 100%;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         order: 1;
-        padding-right: 0;
+        padding: 0 10px;
     }
     
     .Home-img {
-        margin-left: 0;
-        margin-top: 20px;
+        margin: 0;
         order: 2;
+        align-self: center;
     }
     
     .Home-img img {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
     }
     
     /* Mobile Animation Adjustments */
@@ -1683,150 +1765,220 @@ h1, h2, h3, h4, h5, h6, p, span {
     }
     
     .Home-content h1 {
-        font-size: 36px;
+        font-size: 32px;
         margin: 10px 0;
+        line-height: 1.2;
     }
     
     .Home-content h3 {
-        font-size: 22px;
+        font-size: 20px;
         margin: 8px 0;
+        line-height: 1.3;
     }
     
     .Home-content p {
-        font-size: 16px;
+        font-size: 15px;
         margin: 15px 0;
-        line-height: 1.5;
+        line-height: 1.6;
+        padding: 0 10px;
     }
     
     .btn-container {
         justify-content: center;
-        margin-top: 15px;
+        margin-top: 20px;
+        gap: 10px;
     }
     
-    /* About Section Mobile */
+    .btn-box {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    /* About Section Mobile - Fix layout and text overflow */
     .About {
         flex-direction: column;
         text-align: center;
-        padding: 40px 4% 0;
+        padding: 40px 4% 20px;
         min-height: auto;
+        gap: 20px;
     }
     
     .About-img {
-        margin: 0 auto 30px;
+        margin: 0 auto;
         order: 1;
     }
     
     .About-img img {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
     }
     
     .About-text {
         order: 2;
         max-width: 100%;
-        padding: 0 10px;
+        padding: 0 15px;
+        text-align: left;
     }
     
     .About-text h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
+        font-size: 32px;
+        margin-bottom: 15px;
         line-height: 1.2;
+        text-align: center;
     }
     
     .About-text h4 {
-        font-size: 20px;
-        margin-bottom: 20px;
-        line-height: 1.3;
+        font-size: 18px;
+        margin-bottom: 15px;
+        line-height: 1.4;
+        text-align: center;
     }
     
     .About-text p {
-        font-size: 16px;
-        line-height: 1.8;
-        margin-bottom: 25px;
-        text-align: left;
-        padding: 0 5px;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        text-align: justify;
+        padding: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
-    /* Skills Mobile */
+    /* Skills Mobile - Better spacing */
     .Skills {
-        padding: 50px 3% !important;
+        padding: 40px 4% !important;
+    }
+    
+    .sub-title {
+        font-size: 28px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .skills-intro {
+        font-size: 14px;
+        margin-bottom: 30px;
+        padding: 0 10px;
     }
     
     .skills-categories {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 20px;
+        padding: 0;
     }
     
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    .skill-category {
+        padding: 20px 15px;
+    }
+    
+    .category-title {
+        font-size: 18px;
+        gap: 10px;
+        margin-bottom: 15px;
     }
     
     .skill-item {
-        padding: 15px;
+        padding: 12px;
     }
     
-    /* Projects Mobile */
+    .skill-name {
+        font-size: 14px;
+    }
+    
+    .skill-percentage {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+    
+    /* Projects Mobile - Better layout */
     .Projects {
-        padding: 50px 3% !important;
+        padding: 40px 4% !important;
     }
     
     .container2 {
         padding: 0;
+        margin: 0 auto;
     }
     
     .project {
         width: 100%;
-        margin-bottom: 25px;
-        padding: 20px;
+        margin-bottom: 20px;
+        padding: 15px;
+        min-height: auto;
+    }
+    
+    .project-header {
+        gap: 10px;
+        margin-bottom: 10px;
     }
     
     .project h3 {
-        font-size: 20px;
-        margin-bottom: 15px;
+        font-size: 18px;
+        margin-bottom: 10px;
+        line-height: 1.3;
     }
     
     .project p {
         font-size: 14px;
         line-height: 1.5;
         margin-bottom: 15px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        -webkit-line-clamp: none;
+        line-clamp: none;
+        overflow: visible;
+        display: block;
     }
     
-    /* Experience Mobile */
+    /* Experience Mobile - Better spacing */
     .Experience {
-        padding: 50px 3% !important;
+        padding: 40px 4% !important;
+    }
+    
+    .container3 {
+        padding: 0;
+        margin: 0 auto;
     }
     
     .experience {
-        margin-bottom: 25px;
-        padding: 20px;
+        margin-bottom: 20px;
+        padding: 15px;
     }
     
     .experience h3 {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.4;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .experience p {
-        font-size: 14px;
-        margin: 8px 0;
+        font-size: 13px;
+        margin: 5px 0;
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
-    /* Contact Mobile */
+    /* Contact Mobile - Fix layout */
     .Contact {
-        padding: 50px 3% !important;
+        padding: 40px 4% !important;
+        display: block;
     }
     
     .contact-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        display: block;
         padding: 0;
+        text-align: center;
     }
     
     .contact-text {
-        text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .contact-text h2 {
+        font-size: 32px !important;
+        margin-bottom: 15px;
     }
     
     .contact-text h4 {
@@ -1837,128 +1989,199 @@ h1, h2, h3, h4, h5, h6, p, span {
     .contact-text p {
         font-size: 14px;
         margin-bottom: 20px;
+        line-height: 1.6;
+    }
+    
+    .contact-list {
+        text-align: left;
+        max-width: 300px;
+        margin: 0 auto 20px;
     }
     
     .contact-list li {
         font-size: 14px;
         margin: 8px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    
+    .contact-form {
+        max-width: 100%;
+    }
+    
+    .contact-form form {
+        padding: 15px;
     }
     
     .contact-form input,
     .contact-form textarea {
+        width: 100%;
         font-size: 14px;
         padding: 12px;
         margin-bottom: 15px;
+        box-sizing: border-box;
     }
 }
 
 @media (max-width: 480px) {
     /* Extra small mobile adjustments */
     section {
-        padding: 30px 0;
+        padding: 25px 0;
+    }
+    
+    .header {
+        padding: 8px 2%;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    .navbar a {
+        font-size: 12px;
+        padding: 3px 6px;
     }
     
     .Home {
-        padding: 40px 2% 0;
+        padding: 70px 3% 20px;
     }
     
     .Skills, .Projects, .Experience, .Contact {
-        padding: 40px 2% !important;
+        padding: 30px 3% !important;
     }
     
     .Home-img img {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
     }
     
     .Home-content h1 {
         font-size: 28px;
+        line-height: 1.2;
     }
     
     .Home-content h3 {
         font-size: 18px;
+        line-height: 1.3;
     }
     
     .Home-content p {
         font-size: 14px;
+        line-height: 1.6;
+        padding: 0 5px;
     }
     
     .sub-title {
         font-size: 24px !important;
-        margin-bottom: 20px;
+        margin-bottom: 15px !important;
     }
     
     .btn-container {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
     }
     
     .btn-box {
-        width: 180px;
+        width: 160px;
         text-align: center;
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 8px 16px;
+        font-size: 13px;
     }
     
     .About-text h2 {
-        font-size: 28px;
-        margin-bottom: 15px;
+        font-size: 26px;
+        margin-bottom: 12px;
         line-height: 1.2;
     }
     
     .About-text h4 {
-        font-size: 18px;
-        margin-bottom: 15px;
-        line-height: 1.3;
+        font-size: 16px;
+        margin-bottom: 12px;
+        line-height: 1.4;
     }
     
     .About-text p {
-        font-size: 15px;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        text-align: left;
-        padding: 0 5px;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        padding: 0;
     }
     
     .About-img img {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
+    }
+    
+    .project {
+        padding: 12px;
+        margin-bottom: 15px;
     }
     
     .project h3 {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 1.3;
     }
     
     .project p {
         font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    .experience {
+        padding: 12px;
+        margin-bottom: 15px;
     }
     
     .experience h3 {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.4;
     }
     
     .experience p {
-        font-size: 13px;
+        font-size: 12px;
+        line-height: 1.5;
     }
     
     .contact-text h2 {
-        font-size: 28px;
+        font-size: 26px !important;
+    }
+    
+    .contact-text h4 {
+        font-size: 16px;
+    }
+    
+    .contact-text p {
+        font-size: 13px;
+    }
+    
+    .contact-list li {
+        font-size: 13px;
     }
     
     .contact-form input,
     .contact-form textarea {
         width: 100%;
-        padding: 12px;
-        font-size: 14px;
+        padding: 10px;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+    
+    .contact-form form {
+        padding: 10px;
     }
     
     /* Small Mobile Animation Adjustments */
     .Home-img::before {
-        top: -6px;
-        left: -6px;
-        right: -6px;
-        bottom: -6px;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
     }
     
     .Home-img::after {
@@ -1966,5 +2189,33 @@ h1, h2, h3, h4, h5, h6, p, span {
         left: -3px;
         right: -3px;
         bottom: -3px;
+    }
+    
+    /* Skills adjustments for small screens */
+    .skill-category {
+        padding: 15px 10px;
+    }
+    
+    .category-title {
+        font-size: 16px;
+        gap: 8px;
+    }
+    
+    .category-title i {
+        font-size: 16px;
+        padding: 6px;
+    }
+    
+    .skill-item {
+        padding: 10px;
+    }
+    
+    .skill-name {
+        font-size: 13px;
+    }
+    
+    .skill-percentage {
+        font-size: 11px;
+        padding: 2px 6px;
     }
 }
